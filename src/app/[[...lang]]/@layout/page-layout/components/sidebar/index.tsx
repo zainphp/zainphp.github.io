@@ -13,8 +13,8 @@ import SIDEBAR_WIDTH from '@/constants/themes/sidebar-width'
 export default function Sidebar({ locale }: { locale: Locale }) {
     return (
         <Box
-            minWidth={SIDEBAR_WIDTH}
             sx={{
+                minWidth: SIDEBAR_WIDTH,
                 backgroundColor: '#333',
                 zIndex: 1200,
             }}>

@@ -75,7 +75,12 @@ const sectionTitle: Record<Locale, string> = {
 export default function AboutSection({ locale }: { locale: Locale }) {
     return (
         <Section id="about" title={sectionTitle[locale]}>
-            <Box display="flex" flexDirection="column" gap={2}>
+            <Box
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: 2,
+                }}>
                 {content[locale].map((item, index) => (
                     // biome-ignore lint/suspicious/noArrayIndexKey: no id
                     <Typography align="justify" key={index}>

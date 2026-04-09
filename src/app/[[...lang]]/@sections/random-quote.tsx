@@ -15,19 +15,26 @@ export default function RandomQuote() {
     }, [])
 
     return (
-        <Box mt={40}>
+        <Box
+            sx={{
+                mt: 40,
+            }}>
             {randomIndex !== undefined && (
                 <>
                     <Typography
                         variant="caption"
-                        color="text.secondary"
+                        sx={{
+                            color: 'text.secondary',
+                        }}
                         component="div">
                         "{quotes[randomIndex]?.quote}"
                     </Typography>
 
                     <Typography
                         variant="caption"
-                        color="text.secondary"
+                        sx={{
+                            color: 'text.secondary',
+                        }}
                         component="div">
                         - {quotes[randomIndex]?.author}
                     </Typography>

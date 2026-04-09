@@ -26,8 +26,8 @@ export default function Section({
                     },
                     alignItems: 'center',
                     gap: 1,
-                }}
-                mb={4}>
+                    mb: 4,
+                }}>
                 <CodeTag component="h2" fontSize="2em">
                     {title}
                 </CodeTag>

@@ -81,11 +81,21 @@ export default function SkillsSectionContent({
                 flexDirection: 'column',
                 alignItems: 'center',
             }}>
-            <Box minHeight="400px" minWidth="400px">
+            <Box
+                sx={{
+                    minHeight: '400px',
+                    minWidth: '400px',
+                }}>
                 {isClient && <SkillCanvas skills={skillsToShow} />}
             </Box>
 
-            <Box display="flex" gap={1} mt={6} mb={1}>
+            <Box
+                sx={{
+                    display: 'flex',
+                    gap: 1,
+                    mt: 6,
+                    mb: 1,
+                }}>
                 <Button
                     onClick={() => {
                         setIsShowBeginnerSkills(prev => !prev)
@@ -119,8 +129,10 @@ export default function SkillsSectionContent({
             <Typography
                 variant="body2"
                 component="div"
-                color="text.secondary"
-                fontFamily="monospace">
+                sx={{
+                    fontFamily: 'monospace',
+                    color: 'text.secondary',
+                }}>
                 click to apply filter(s)
             </Typography>
         </Box>

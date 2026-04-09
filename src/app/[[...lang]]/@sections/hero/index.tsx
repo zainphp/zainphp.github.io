@@ -16,9 +16,9 @@ export default function HeroSection({ locale }: { locale: Locale }) {
             component="section"
             container
             spacing={4}
-            justifyContent="center"
-            alignItems="center"
             sx={{
+                justifyContent: 'center',
+                alignItems: 'center',
                 flexDirection: {
                     xs: 'column-reverse',
                     sm: 'row',
@@ -29,8 +29,10 @@ export default function HeroSection({ locale }: { locale: Locale }) {
                     xs: 12,
                     sm: 4,
                 }}
-                display="flex"
-                justifyContent="center">
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                }}>
                 <ProfileImage />
             </Grid>
             <Grid
@@ -38,22 +40,26 @@ export default function HeroSection({ locale }: { locale: Locale }) {
                     xs: 12,
                     sm: 8,
                 }}
-                gap={1.5}
-                display="flex"
-                flexDirection="column">
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: 1.5,
+                }}>
                 <Typography variant="h5" component="h1">
                     Adam <CodeTag>Zain</CodeTag> Akbar
                 </Typography>
 
                 <Typography
                     variant="h2"
-                    fontWeight="bold"
                     component="h2"
-                    lineHeight={0.9}>
+                    sx={{
+                        fontWeight: 'bold',
+                        lineHeight: 0.9,
+                    }}>
                     {DICTIONARIES.roleTitle1[locale]}
                 </Typography>
 
-                <Typography color="info.main">
+                <Typography color="info">
                     {DICTIONARIES.roleTitle2[locale]}
                 </Typography>
 

@@ -26,7 +26,12 @@ export default function ProjectItemCard({
                 minWidth: 300,
             }}>
             <CardContent sx={{ position: 'relative', height: '100%' }}>
-                <Typography mb={1} variant="body2" color="text.secondary">
+                <Typography
+                    variant="body2"
+                    sx={{
+                        mb: 1,
+                        color: 'text.secondary',
+                    }}>
                     Stacks:
                 </Typography>
 
@@ -46,20 +51,31 @@ export default function ProjectItemCard({
                     {name}
                 </Typography>
 
-                <Typography mb={2} variant="body2" color="text.secondary">
+                <Typography
+                    variant="body2"
+                    sx={{
+                        mb: 2,
+                        color: 'text.secondary',
+                    }}>
                     {year}
                 </Typography>
 
-                <Typography variant="body2" mb={8}>
+                <Typography
+                    variant="body2"
+                    sx={{
+                        mb: 8,
+                    }}>
                     {description[locale]}
                 </Typography>
 
                 <Box
-                    display="flex"
-                    gap={1}
-                    mt={2}
-                    position="absolute"
-                    bottom={16}>
+                    sx={{
+                        display: 'flex',
+                        gap: 1,
+                        mt: 2,
+                        position: 'absolute',
+                        bottom: 16,
+                    }}>
                     {buttons.map(button => (
                         <Button
                             color="info"

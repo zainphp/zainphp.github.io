@@ -20,12 +20,17 @@ export default function PageLayout({
 }) {
     return (
         <>
-            <Box display="flex">
+            <Box
+                sx={{
+                    display: 'flex',
+                }}>
                 <Sidebar locale={locale} />
 
                 <Box
-                    flexGrow={1}
-                    maxWidth={`calc(100% - ${SIDEBAR_WIDTH.toString()}px)`}>
+                    sx={{
+                        flexGrow: 1,
+                        maxWidth: `calc(100% - ${SIDEBAR_WIDTH.toString()}px)`,
+                    }}>
                     <Header />
 
                     <Box

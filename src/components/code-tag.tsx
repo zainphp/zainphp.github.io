@@ -1,6 +1,3 @@
-// vendors
-import type { ReactNode } from 'react'
-// materials
 import Typography, { type TypographyProps } from '@mui/material/Typography'
 
 export default function CodeTag({
@@ -8,16 +5,16 @@ export default function CodeTag({
     component = 'span',
     fontSize = 'inherit',
 }: {
-    children: ReactNode
+    children: React.ReactNode
     component?: TypographyProps['component']
-    fontSize?: TypographyProps['fontSize']
+    fontSize?: React.CSSProperties['fontSize']
 }) {
     return (
         <Typography
-            color="info.main"
             component={component}
-            fontSize={fontSize}
             sx={{
+                color: 'info.main',
+                fontSize: fontSize,
                 fontFamily: 'monospace',
                 fontWeight: 'bold',
                 '&:after': {
