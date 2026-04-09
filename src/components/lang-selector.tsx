@@ -9,7 +9,11 @@ import type { Locale } from '@/app/[[...lang]]/@types/locale'
 
 export default function LangSelector({ locale }: { locale: Locale }) {
     return (
-        <Box display="flex" marginTop={-4}>
+        <Box
+            sx={{
+                display: 'flex',
+                marginTop: -4,
+            }}>
             <LangButton href="/" isActive={locale === 'en'}>
                 En
             </LangButton>

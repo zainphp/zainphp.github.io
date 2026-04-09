@@ -26,7 +26,11 @@ export default function SearchBar({
     const debounced = useDebouncedCallback(onChangeDebounce, 500)
 
     return (
-        <Box display="flex" alignItems="center">
+        <Box
+            sx={{
+                display: 'flex',
+                alignItems: 'center',
+            }}>
             <Grow in={!isOpen} exit={false} unmountOnExit>
                 <IconButton
                     size="small"

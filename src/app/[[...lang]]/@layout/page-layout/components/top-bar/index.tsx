@@ -28,7 +28,12 @@ export default function Header() {
                         pt: 1.2,
                     }}>
                     <InfoIcon color="info" fontSize="small" />
-                    <Typography mx={1}>README.md</Typography>
+                    <Typography
+                        sx={{
+                            mx: 1,
+                        }}>
+                        README.md
+                    </Typography>
                 </Box>
             </Box>
 

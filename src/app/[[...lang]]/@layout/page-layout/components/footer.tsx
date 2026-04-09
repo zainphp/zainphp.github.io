@@ -31,7 +31,10 @@ export default function Footer() {
                 }}>
                 <FontAwesomeIcon icon={faBoltLightning} width={11} />
             </Box>
-            <Box flexGrow={1}>
+            <Box
+                sx={{
+                    flexFlow: 1,
+                }}>
                 <FontAwesomeIcon icon={faPizzaSlice} width={14} />
             </Box>
 

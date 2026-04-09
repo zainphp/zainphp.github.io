@@ -67,10 +67,12 @@ export default function WritingCardItem({
             }}>
             <CardContent sx={{ position: 'relative', height: '100%' }}>
                 <Box
-                    display="flex"
-                    alignItems="center"
-                    gap={1}
-                    justifyContent="space-between">
+                    sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 1,
+                        justifyContent: 'space-between',
+                    }}>
                     <Chip
                         label={DICTIONARIES.writingType[type][locale]}
                         variant="outlined"
@@ -80,7 +82,12 @@ export default function WritingCardItem({
                     <LangFlag lang={lang} />
                 </Box>
 
-                <Typography variant="h6" component="div" mt={3}>
+                <Typography
+                    variant="h6"
+                    component="div"
+                    sx={{
+                        mt: 3,
+                    }}>
                     {title[locale]}
                 </Typography>
 
@@ -91,7 +98,12 @@ export default function WritingCardItem({
                     • {dayjs(date).locale(locale).format('LL')}
                 </Typography>
 
-                <Typography variant="body2" mt={3} mb={6}>
+                <Typography
+                    variant="body2"
+                    sx={{
+                        mt: 3,
+                        mb: 6,
+                    }}>
                     {previewText[locale]}
                 </Typography>
 
@@ -121,7 +133,7 @@ function LangFlag({ lang }: { lang: Writing['lang'] }) {
             title={lang === 'id' ? 'Bahasa Indonesia' : 'English'}
             arrow
             placement="left">
-            <Box mr={0.5}>
+            <Box sx={{ mr: 0.5 }}>
                 <Flag country={lang === 'id' ? 'ID' : 'GB'} />
             </Box>
         </Tooltip>
