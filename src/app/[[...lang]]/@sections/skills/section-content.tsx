@@ -20,6 +20,7 @@ export default function SkillsSectionContent({
 }: {
     searchText: string
 }) {
+    const [isClient, setIsClient] = useState(false)
     const [isShowAdvancedSkills, setIsShowAdvancedSkills] = useState(false)
     const [isShowIntermediateSkills, setIsShowIntermediateSkills] =
         useState(false)
@@ -69,6 +70,10 @@ export default function SkillsSectionContent({
         isShowBeginnerSkills,
     ])
 
+    useEffect(() => {
+        setIsClient(true)
+    }, [])
+
     return (
         <Box
             sx={{
@@ -76,8 +81,8 @@ export default function SkillsSectionContent({
                 flexDirection: 'column',
                 alignItems: 'center',
             }}>
-            <Box>
-                <SkillCanvas skills={skillsToShow} />
+            <Box minHeight="400px" minWidth="400px">
+                {isClient && <SkillCanvas skills={skillsToShow} />}
             </Box>
 
             <Box display="flex" gap={1} mt={6} mb={1}>
