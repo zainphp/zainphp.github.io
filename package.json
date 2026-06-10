@@ -6,31 +6,29 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "biome check && tsc",
-        "lint:fix": "biome check --write",
-        "preview": "firebase emulators:start"
+        "lint": "biome check --write && tsc"
     },
     "dependencies": {
-        "@biomejs/biome": "2.4.10",
+        "@biomejs/biome": "^2.4.16",
         "@emotion/cache": "^11.14.0",
         "@emotion/react": "^11.14.0",
         "@emotion/styled": "^11.14.1",
-        "@fortawesome/fontawesome-svg-core": "7.2.0",
-        "@fortawesome/free-brands-svg-icons": "7.2.0",
-        "@fortawesome/free-solid-svg-icons": "7.2.0",
-        "@fortawesome/react-fontawesome": "3.3.0",
-        "@mui/icons-material": "9.0.0",
-        "@mui/material": "9.0.0",
-        "@mui/material-nextjs": "9.0.0",
-        "dayjs": "^1.11.20",
-        "next": "^16.2.3",
+        "@fortawesome/fontawesome-svg-core": "^7.2.0",
+        "@fortawesome/free-brands-svg-icons": "^7.2.0",
+        "@fortawesome/free-solid-svg-icons": "^7.2.0",
+        "@fortawesome/react-fontawesome": "^3.3.1",
+        "@mui/icons-material": "^9.1.0",
+        "@mui/material": "^9.1.0",
+        "@mui/material-nextjs": "^9.1.0",
+        "dayjs": "^1.11.21",
+        "next": "^16.2.9",
         "react-flagkit": "^2.0.4",
         "use-debounce": "^10.1.1"
     },
     "devDependencies": {
         "@types/number-to-words": "^1.2.3",
-        "@types/react": "^19.2.14",
+        "@types/react": "^19.2.17",
         "@types/react-dom": "^19.2.3",
-        "typescript": "^6.0.2"
+        "typescript": "^6.0.3"
     }
 }
