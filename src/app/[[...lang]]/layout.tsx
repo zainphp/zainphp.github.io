@@ -7,7 +7,6 @@ import type Params from './@types/params'
 import type { Locale } from './@types/locale'
 import ThemeProvider from './@layout/theme-provider'
 import PageLayout from './@layout/page-layout'
-import InitFirebase from './init-firebase'
 // utils
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -43,12 +42,12 @@ export default async function RootLayout({
         '@context': 'https://schema.org',
         '@type': 'Person',
         name: 'Adam Zain Akbar',
-        url: 'https://zain-adam.web.app',
+        url: 'https://zainphp.github.io',
         jobTitle: 'Web Developer',
         description:
             'Adam Zain Akbar is a full time learner, mostly a web developer.',
         sameAs: [
-            'https://github.com/dominosaurs',
+            'https://github.com/zainphp',
             'https://www.linkedin.com/in/-zain-adam/',
             'https://scholar.google.com/citations?user=N9MoW0EAAAAJ',
         ],
@@ -57,8 +56,8 @@ export default async function RootLayout({
     const websiteJsonLd = {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
-        name: 'Adam Zain Akbar Portfolio',
-        url: 'https://zain-adam.web.app',
+        name: 'Adam Zain Akbar Web Profile',
+        url: 'https://zainphp.github.io',
         publisher: {
             '@type': 'Person',
             name: 'Adam Zain Akbar',

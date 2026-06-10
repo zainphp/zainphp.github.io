@@ -105,7 +105,7 @@ const projects: Project[] = [
     //         {
     //             text: SOURCE_CODE_BUTTON_TEXT,
     //             Icon: GitHubIcon,
-    //             url: 'https://github.com/dominosaurs/sensasi-navbar-crx',
+    //             url: 'https://github.com/zainphp/sensasi-navbar-crx',
     //         },
     //     ],
     // },
@@ -161,7 +161,7 @@ const projects: Project[] = [
     //         {
     //             text: SOURCE_CODE_BUTTON_TEXT,
     //             Icon: GitHubIcon,
-    //             url: 'https://github.com/dominosaurs/reformat-delight',
+    //             url: 'https://github.com/zainphp/reformat-delight',
     //         },
     //     ],
     // },
@@ -177,7 +177,7 @@ const projects: Project[] = [
             {
                 text: VISIT_BUTTON_TEXT,
                 Icon: GitHubIcon,
-                url: 'https://github.com/dominosaurs/terloquent-id',
+                url: 'https://github.com/zainphp/terloquent-id',
             },
         ],
     },
@@ -198,7 +198,7 @@ const projects: Project[] = [
             {
                 text: SOURCE_CODE_BUTTON_TEXT,
                 Icon: GitHubIcon,
-                url: 'https://github.com/dominosaurs/vertical-tabs-crx',
+                url: 'https://github.com/zainphp/vertical-tabs-crx',
             },
         ],
     },

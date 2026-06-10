@@ -29,7 +29,7 @@ const socials: Social[] = [
             vendor: 'fa',
             value: faGithub,
         },
-        link: 'https://github.com/dominosaurs',
+        link: 'https://github.com/zainphp',
     },
     {
         name: 'LinkedIn',
