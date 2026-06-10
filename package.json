@@ -23,7 +23,6 @@
         "@mui/material": "9.0.0",
         "@mui/material-nextjs": "9.0.0",
         "dayjs": "^1.11.20",
-        "firebase": "^12.11.0",
         "next": "^16.2.3",
         "react-flagkit": "^2.0.4",
         "use-debounce": "^10.1.1"
