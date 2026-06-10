@@ -83,7 +83,6 @@ export default async function RootLayout({
                 />
             </head>
             <body className={roboto.variable}>
-                <InitFirebase />
                 <AppRouterCacheProvider>
                     <ThemeProvider>
                         <PageLayout locale={lang[0]}>{children}</PageLayout>
