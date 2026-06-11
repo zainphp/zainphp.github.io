@@ -1,5 +1,5 @@
 import Paper from '@mui/material/Paper'
-import avatarImage from './avatar.png'
+import avatarImage from './avatar-360-tinified.png'
 import Image from 'next/image'
 
 export default function ProfileImage() {
