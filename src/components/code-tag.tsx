@@ -17,6 +17,7 @@ export default function CodeTag({
                 fontSize: fontSize,
                 fontFamily: 'monospace',
                 fontWeight: 'bold',
+                lineHeight: 1,
                 '&:after': {
                     content: '">"',
                     color: 'text.secondary',

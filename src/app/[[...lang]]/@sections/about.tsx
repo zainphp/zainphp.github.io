@@ -14,7 +14,7 @@ const content: Record<Locale, ReactNode[]> = {
     en: [
         <>
             Proud member of{' '}
-            <Link href="https://lara-army.github.id/">
+            <Link href="https://lara-army.github.io/">
                 <CodeTag>Laravel Indonesia</CodeTag>
             </Link>
         </>,
@@ -40,7 +40,7 @@ const content: Record<Locale, ReactNode[]> = {
 
     ja: [
         <>
-            <Link href="https://lara-army.github.id/">Laravel Indonesia</Link>
+            <Link href="https://lara-army.github.io/">Laravel Indonesia</Link>
             の誇り高きメンバー
         </>,
         <>

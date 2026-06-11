@@ -10,7 +10,7 @@ const DICTIONARIES: {
     },
 
     roleTitle2: {
-        en: 'Full time learner, mostly a web developer.',
+        en: 'Full-time learner, mostly a web developer.',
         ja: 'フルタイム学習者、主にウェブ開発者。',
     },
 }
