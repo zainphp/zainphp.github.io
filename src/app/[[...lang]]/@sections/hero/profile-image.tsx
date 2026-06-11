@@ -1,5 +1,5 @@
 import Paper from '@mui/material/Paper'
-import pp360Jpg from './profile-picture-assets/pp-360.jpg'
+import avatarImage from './avatar.png'
 import Image from 'next/image'
 
 export default function ProfileImage() {
@@ -14,8 +14,8 @@ export default function ProfileImage() {
                 position: 'relative',
             }}>
             <Image
-                src={pp360Jpg}
-                alt="Adam Zain Akbar - Professional Web Developer"
+                src={avatarImage}
+                alt="Adam Zain Akbar Avatar Photo"
                 fill
                 sizes="200px"
                 priority
