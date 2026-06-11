@@ -140,30 +140,49 @@ export default function SkillsSectionContent({
 }
 
 const SkillCanvas = ({ skills }: { skills: Skill[] }) => {
+    const skillsSignature = skills.map(({ title }) => title).join('|')
+
     useEffect(() => {
-        if (!window.TagCanvas.started) {
-            window.TagCanvas.Start('skills-tagcanvas', 'taglist', {
-                activeAudio: false,
-                minSpeed: 0.01,
-                freezeActive: true,
-                shuffleTags: true,
-                shape: 'sphere',
-                weight: true,
-                textColour: null,
-                weightFrom: 'data-weight',
-                weightSize: 10,
-                imageMode: 'both',
-                imagePadding: 10,
-                pinchZoom: true,
-                wheelZoom: false,
-                clickToFront: 600,
-                fadeIn: 1000,
-                initial: [0.3, -0.1],
-            })
-        } else {
-            window.TagCanvas.Reload('skills-tagcanvas')
+        let isCancelled = false
+        const currentSkillsSignature = skillsSignature
+
+        void waitForTagListImages('taglist').then(() => {
+            if (
+                isCancelled ||
+                document.getElementById('taglist')?.dataset.skillsSignature !==
+                    currentSkillsSignature
+            ) {
+                return
+            }
+
+            if (!window.TagCanvas.started) {
+                window.TagCanvas.Start('skills-tagcanvas', 'taglist', {
+                    activeAudio: false,
+                    minSpeed: 0.01,
+                    freezeActive: true,
+                    shuffleTags: true,
+                    shape: 'sphere',
+                    weight: true,
+                    textColour: null,
+                    weightFrom: 'data-weight',
+                    weightSize: 10,
+                    imageMode: 'both',
+                    imagePadding: 10,
+                    pinchZoom: true,
+                    wheelZoom: false,
+                    clickToFront: 600,
+                    fadeIn: 1000,
+                    initial: [0.3, -0.1],
+                })
+            } else {
+                window.TagCanvas.Reload('skills-tagcanvas')
+            }
+        })
+
+        return () => {
+            isCancelled = true
         }
-    })
+    }, [skillsSignature])
 
     return (
         <>
@@ -178,7 +197,10 @@ const SkillCanvas = ({ skills }: { skills: Skill[] }) => {
                     margin: '0 auto',
                 }}
                 className="to-fade-in fast-anim"></canvas>
-            <div id="taglist" style={{ display: 'none' }}>
+            <div
+                data-skills-signature={skillsSignature}
+                id="taglist"
+                style={{ display: 'none' }}>
                 <ul>
                     {skills.map(skill => (
                         <SkillLi key={skill.title} data={skill} />
@@ -210,7 +232,7 @@ function SkillLi({
                 component="a">
                 {title}
                 <Image
-                    loading="lazy"
+                    loading="eager"
                     src={logo}
                     alt={title}
                     height={sizePx}
@@ -244,4 +266,32 @@ function getStylesByLevel(level: Skill['level']) {
         weight: 3,
         sizePx: 32,
     }
+}
+
+function waitForTagListImages(tagListId: string) {
+    const tagList = document.getElementById(tagListId)
+    const images = Array.from(tagList?.getElementsByTagName('img') ?? [])
+
+    if (!images.length) {
+        return Promise.resolve()
+    }
+
+    return Promise.all(
+        images.map(
+            image =>
+                new Promise<void>(resolve => {
+                    if (image.complete && image.naturalWidth > 0) {
+                        resolve()
+                        return
+                    }
+
+                    image.addEventListener('load', () => resolve(), {
+                        once: true,
+                    })
+                    image.addEventListener('error', () => resolve(), {
+                        once: true,
+                    })
+                }),
+        ),
+    )
 }
