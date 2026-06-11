@@ -43,20 +43,16 @@ export default function HeroSection({ locale }: { locale: Locale }) {
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
-                    gap: 1.5,
+                    gap: 1,
                 }}>
-                <Typography variant="h5" component="h1">
-                    Adam <CodeTag>Zain</CodeTag> Akbar
-                </Typography>
-
                 <Typography
-                    variant="h2"
-                    component="h2"
+                    variant="h3"
+                    component="h1"
                     sx={{
                         fontWeight: 'bold',
-                        lineHeight: 0.9,
+                        lineHeight: 1,
                     }}>
-                    {DICTIONARIES.roleTitle1[locale]}
+                    Adam <CodeTag>Zain</CodeTag> Akbar
                 </Typography>
 
                 <Typography color="info">
